@@ -1,7 +1,7 @@
 import React from "react";
 
 const MessageForm = () => {
-  return <div></div>;
+  return <div>Message Form</div>;
 };
 
 export default MessageForm;
