@@ -7,7 +7,7 @@ const ChatFeed = (props) => {
 
   const chat = chats && chats[activeChat];
 
-  const renderMessage = () => {
+  const renderMessages = () => {
     const keys = Object.keys(messages);
 
     return keys.map((key, index) => {
@@ -30,7 +30,7 @@ const ChatFeed = (props) => {
             className="read-reciepts"
             style={{
               marginRight: isMyMessage ? "18px" : "0px",
-              marginLeft: isMyMessage ? "0px" : "6  8px",
+              marginLeft: isMyMessage ? "0px" : "68px",
             }}
           ></div>
         </div>
@@ -39,6 +39,18 @@ const ChatFeed = (props) => {
   };
 
   console.log(props);
-  return <div className="">ChatFeed</div>;
+  return (
+    <div className="chat-feed">
+      <div className="chat-title-container">
+        <div className="chat-title">{chat?.title}</div>
+        <div className="chat-subtitle"></div>
+        {renderMessages()}
+        <div className="h-[100px]" />
+        <div className="message-form-container">
+          <MessageForm {...props} chatId={activeChat} />
+        </div>
+      </div>
+    </div>
+  );
 };
 export default ChatFeed;
