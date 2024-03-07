@@ -14,13 +14,24 @@ const TheirMessage = ({ lastMessage, message }) => {
         />
       )}
 
-      {message.attachments && message.attachments.length > 0  (
-           <img
-           src={message.attachment[0].file}
-           className="message-image"
-           alt="message-attachment"
-           style={{ float: "right" }}
-         />
+      {message.attachments && message.attachments.length > 0 ? (
+        <img
+          src={message.attachments[0].file}
+          className="message-image"
+          alt="message-attachment"
+          style={{ marginLeft: isFirstMessageByUser ? "4px" : "48px" }}
+        />
+      ) : (
+        <div
+          className="message"
+          style={{
+            float: "left",
+            backgroundColor: "#CABCDC",
+            marginLeft: isFirstMessageByUser ? "4px" : "48px",
+          }}
+        >
+          {message.text}
+        </div>
       )}
     </div>
   );
