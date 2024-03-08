@@ -1,3 +1,183 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply tracking-[0.5px];
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.ce-chat-list {
+  @apply bg-[rgb(240,240,240)];
+}
+
+.ce-chats-container {
+  @apply bg-[rgb(240,240,240)];
+}
+
+.ce-active-chat-card {
+  @apply bg-[#cabcdc] rounded-none border-4 border-solid border-[#cabcdc];
+}
+
+.ce-chat-subtitle-text {
+  @apply text-[#595959];
+}
+
+.ce-chat-form-container {
+  @apply pb-5;
+}
+
+.ce-text-input {
+  @apply border rounded-md border-solid border-[#3b2a50];
+}
+
+.ce-primary-button {
+  @apply bg-[#7554a0] relative rounded-md bottom-px;
+}
+
+.ce-danger-button {
+  @apply bg-[white] rounded-[22px];
+}
+
+.ce-settings {
+  @apply bg-[rgb(240,240,240)];
+}
+
+.ce-autocomplete-input {
+  @apply border rounded-md border-solid border-[#3b2a50];
+}
+
+.ce-autocomplete-options {
+  @apply border bg-[white] rounded-md border-solid border-[#3b2a50];
+}
+
+.ce-chat-settings-container {
+  @apply pt-3;
+}
+
+.ce-chat-avatars-row {
+  @apply hidden;
+}
+
+/* CUSTOM FEED */
+.chat-feed {
+  @apply h-full w-full overflow-scroll bg-[rgb(240,240,240)];
+}
+
+.chat-title-container {
+  @apply w-[calc(100%_-_36px)] text-center p-[18px];
+}
+
+.chat-title {
+  @apply text-[#7554a0] font-extrabold text-2xl;
+}
+
+.chat-subtitle {
+  @apply text-[#7554a0] font-semibold text-xs pt-1;
+}
+
+.message-row {
+  @apply float-left w-full flex ml-[18px];
+}
+
+.message-block {
+  @apply w-full inline-block;
+}
+
+.message-avatar {
+  @apply w-11 h-11 text-[white] text-center bg-no-repeat bg-center bg-[48px] rounded-[22px];
+}
+
+.message {
+  @apply text-base max-w-[60%] p-3 rounded-md;
+}
+
+.message-image {
+  @apply object-cover h-[30vw] max-h-[200px] max-w-[200px] min-h-[100px] min-w-[100px] mr-[18px] rounded-md; /* width: 30vw; */
+}
+
+.read-receipts {
+  @apply relative bottom-1.5;
+}
+
+.read-receipt {
+  @apply w-[13px] h-[13px] bg-no-repeat bg-center bg-[14px] m-[1.5px] rounded-[13px];
+}
+
+.message-form-container {
+  @apply absolute w-[calc(100%_-_36px)] bg-[rgb(240,240,240)] p-[18px] bottom-0;
+}
+
+.message-form {
+  @apply overflow-hidden border bg-[white] rounded-md border-solid border-[#3b2a50];
+}
+
+.message-input {
+  @apply h-10 w-[calc(100%_-_132px)] bg-[white] border text-[15px] px-[18px] py-0 border-solid border-[white];
+  outline: none;
+}
+
+.image-button {
+  @apply cursor-pointer h-full px-3 py-0;
+}
+
+.send-button {
+  @apply h-[42px] bg-[white] border cursor-pointer px-[18px] py-0 border-solid border-[white];
+}
+
+.send-icon {
+  @apply relative -rotate-90 top-px;
+}
+
+.picture-icon {
+  @apply relative text-sm top-px;
+}
+
+/* FORM STYLES */
+*,
+*::after,
+*::before {
+  @apply box-border text-[62,5%] m-0 p-0;
+}
+.wrapper {
+  @apply h-screen w-full flex justify-center items-center;
+  background: rgb(117, 84, 160);
+  background: linear-gradient(
+    90deg,
+    rgba(117, 84, 160, 1) 7%,
+    rgba(117, 84, 160, 1) 17%,
+    rgba(106, 95, 168, 1) 29%,
+    rgba(99, 103, 174, 1) 44%,
+    rgba(87, 116, 184, 1) 66%,
+    rgba(70, 135, 198, 1) 83%,
+    rgba(44, 163, 219, 1) 96%,
+    rgba(22, 188, 237, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.input {
+  @apply text-[#333] text-[1.2rem] bg-white w-[90%] block transition-all duration-[0.3s] mb-[25px] mx-auto my-0 px-8 py-6 rounded-[0.2rem] border-b-[0.3rem] border-b-transparent border-[none] border-solid;
+  outline: none;
+}
+
+.form {
+  @apply w-[400px];
+}
+
+.title {
+  @apply text-center text-[white] w-full text-[2.3em] mb-[30px];
+}
+
+.button {
+  @apply rounded bg-[white] text-[black] text-center uppercase text-[22px] w-[200px] transition-all duration-[0.4s] cursor-pointer w-[90%] m-[5px] p-5 border-[none];
+}
+
+.button span {
+  @apply cursor-pointer inline-block relative transition-[0.4s] after:content-['\00bb'] after:absolute after:opacity-0 after:transition-[0.5s] after:-right-5 after:top-0;
+}
+
+.button:hover span {
+  @apply pr-[25px] after:opacity-100 after:right-0;
+}
