@@ -4,7 +4,7 @@ import axios from "axios";
 const projectID = "ce196766-dfea-44ff-82d7-488294f93ac6";
 
 const LoginForm = () => {
-  const [username, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -37,7 +37,7 @@ const LoginForm = () => {
         <form action="" onSubmit={handleSubmit}>
           <input
             type="text"
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
             value={username}
             className="input"
             placeholder="username"
